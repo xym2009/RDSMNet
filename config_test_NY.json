@@ -1,0 +1,25 @@
+{
+  "datasets": [
+    {
+      "name": "Resdepth",
+      "raster_in": "/root/autodl-fs/NY_raw.tif",
+      "path_image_list": "/root/autodl-fs/NY.txt",
+      "path_pairlist": "/root/autodl-fs/NY_stereo.txt",
+  "area_type": "test",
+      "allocation_strategy": "entire"
+    }
+  ],
+  "model": {
+    "weights": "./train/raw_stunet_newmask_mixstyle_notCF/output_directory/2024-03-09_18-16_ResDepth-stereo/checkpoints/Model_best.pth",
+    "architecture": "./train/raw_stunet_newmask_mixstyle_notCF/output_directory/2024-03-09_18-16_ResDepth-stereo/model_config.json",
+    "normalization_geom": "./train/raw_stunet_newmask_mixstyle_notCF/output_directory/2024-03-09_18-16_ResDepth-stereo/DSM_normalization_parameters.p",
+    "normalization_image": "./train/raw_stunet_newmask_mixstyle_notCF/output_directory/2024-03-09_18-16_ResDepth-stereo/Image_normalization_parameters.p"
+  },
+  "general": {
+    "tile_size": 256
+  },
+  "output": {
+    "directory": "/root/autodl-tmp/NY_test"
+  }
+}
+  

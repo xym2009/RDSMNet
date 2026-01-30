@@ -1,0 +1,1 @@
+/root/autodl-fs/test/NY_PAN1.tif, /root/autodl-fs/test/NY_PAN2.tif

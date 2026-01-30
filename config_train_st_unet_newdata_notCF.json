@@ -1,0 +1,80 @@
+{
+  "datasets": [
+    {
+      "name": "sd_dataset",
+      "raster_gt": "/mnt/wxq/ResDepth/DATA/new/SD1/SD_GT_Clip2.tif",
+      "raster_in": "/mnt/wxq/ResDepth/DATA/new/SD1/SD_raw_Clip2.tif",
+      "path_image_list": "/mnt/wxq/ResDepth/DATA/new/SD1/imagelist_notCF.txt",
+      "path_pairlist_training": "/mnt/wxq/ResDepth/DATA/new/SD1/pairlist_stereo_notCF.txt",
+      "path_pairlist_validation": "/mnt/wxq/ResDepth/DATA/new/SD1/pairlist_stereo_notCF.txt",
+      "area_type": "train+val",
+      "allocation_strategy": "5-crossval_vertical",
+      "test_stripe": 2,
+      "n_training_samples": 6000,
+      "crossval_training": true,
+      "mask_ground_truth": "/mnt/wxq/ResDepth/DATA/new/SD1/loss_mask_SD1.tif"
+    },
+    {
+      "name": "zzg_dataset",
+      "raster_gt": "/mnt/wxq/ResDepth/DATA/new/zzg/ZZG_GT.tif",
+      "raster_in": "/mnt/wxq/ResDepth/DATA/new/zzg/ZZG_raw.tif",
+      "path_image_list": "/mnt/wxq/ResDepth/DATA/new/zzg/imagelist_notCF.txt",
+      "path_pairlist_training": "/mnt/wxq/ResDepth/DATA/new/zzg/pairlist_stereo_notCF.txt",
+      "path_pairlist_validation": "/mnt/wxq/ResDepth/DATA/new/zzg/pairlist_stereo_notCF.txt",
+      "area_type": "train+val",
+      "allocation_strategy": "5-crossval_vertical",
+      "test_stripe": 2,
+      "n_training_samples": 6000,
+      "crossval_training": true,
+      "mask_ground_truth": "/mnt/wxq/ResDepth/DATA/new/zzg/loss_mask_zzg.tif"
+    },
+    {
+      "name": "gf7_dataset",
+      "raster_gt": "/mnt/wxq/ResDepth/DATA/new/SA/SA_GT.tif",
+      "raster_in": "/mnt/wxq/ResDepth/DATA/new/SA/SA_raw.tif",
+      "path_image_list": "/mnt/wxq/ResDepth/DATA/new/SA/imagelist_notCF.txt",
+      "path_pairlist_training": "/mnt/wxq/ResDepth/DATA/new/SA/pairlist_stereo_notCF.txt",
+      "path_pairlist_validation": "/mnt/wxq/ResDepth/DATA/new/SA/pairlist_stereo_notCF.txt",
+      "area_type": "train+val",
+      "allocation_strategy": "5-crossval_vertical",
+      "test_stripe": 2,
+      "n_training_samples": 8000,
+      "crossval_training": true,
+      "mask_ground_truth": "/mnt/wxq/ResDepth/DATA/new/SA/loss_mask_SA.tif"
+    }
+    ],
+  "model": {
+    "input_channels": "geom-stereo"
+  },
+  "stereopair_settings": {
+    "use_all_stereo_pairs": true,
+    "permute_images_within_pair": true
+  },
+  "training_settings": {
+    "tile_size": 256,
+    "augment": true,
+    "batch_size": 20,
+    "n_epochs": 1000,
+    "loss": "L1"
+  },
+  "optimizer": {
+    "name": "Adam",
+    "learning_rate": 0.0002
+  },
+  "scheduler": {
+    "name": "StepLR",
+    "enabled": true,
+    "settings": {
+      "step_size": 200
+    }
+  },
+  "general": {
+    "save_model_rate": 30,
+    "evaluate_rate": 1
+  },
+  "output": {
+    "suffix": "ResDepth-stereo",
+    "output_directory": "/mnt/wxq/train_ST_Unet_using2/train/STUNet/output_directory",
+    "tboard_log_dir": "/mnt/wxq/train_ST_Unet_using2/train/STUNet/tboard_log_directory"
+  }
+}
