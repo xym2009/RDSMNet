@@ -44,10 +44,10 @@ python test.py config_test_xx.json
 ## Dataset
 
 ### Training Set
-[Google Drive](sslocal://flow/file_open?url=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1E8LmhX9sDbAHi4vuBorVPntV_llFf9SC%3Fusp%3Dsharing&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+[Google Drive](https://drive.google.com/drive/folders/1E8LmhX9sDbAHi4vuBorVPntV_llFf9SC?usp=sharing)
 
 ### Test Set
-[Google Drive](sslocal://flow/file_open?url=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1SdDmw77UCJwe80nleNZdW4lN55v8lVUx%3Fusp%3Dsharing&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+[Google Drive](https://drive.google.com/drive/folders/1SdDmw77UCJwe80nleNZdW4lN55v8lVUx?usp=sharing)
 
 Please download and organize the dataset properly before training and testing.
 ## ⏰ Notes 
