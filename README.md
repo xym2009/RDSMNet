@@ -41,7 +41,15 @@ python test.py config_test_xx.json
     crossval_training:true #cross validation usually set as true
     mask_ground_truth:"/mnt/wxq/ResDepth/DATA/new/SD1/loss_mask_SD1.tif" #path of the loss mask，area set as 1 represents the building area, which means ROI, involved in the loss calculation. If there is no mask set, then all the area takes part in the loss calculation.
 ```
+## Dataset
 
+### Training Set
+[Google Drive](sslocal://flow/file_open?url=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1E8LmhX9sDbAHi4vuBorVPntV_llFf9SC%3Fusp%3Dsharing&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+
+### Test Set
+[Google Drive](sslocal://flow/file_open?url=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1SdDmw77UCJwe80nleNZdW4lN55v8lVUx%3Fusp%3Dsharing&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+
+Please download and organize the dataset properly before training and testing.
 ## ⏰ Notes 
 
 **Orthorectified Images:** Remote sensing images corrected using the initial DSM.
