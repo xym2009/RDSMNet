@@ -43,11 +43,8 @@ python test.py config_test_xx.json
 ```
 ## Dataset
 
-### Training Set
-[Google Drive](https://drive.google.com/drive/folders/1E8LmhX9sDbAHi4vuBorVPntV_llFf9SC?usp=sharing)
-
-### Test Set
-[Google Drive](https://drive.google.com/drive/folders/1SdDmw77UCJwe80nleNZdW4lN55v8lVUx?usp=sharing)
+### Training Set & Test Set
+[FigShare](https://doi.org/10.6084/m9.figshare.31938744)
 
 Please download and organize the dataset properly before training and testing.
 ## ⏰ Notes 
